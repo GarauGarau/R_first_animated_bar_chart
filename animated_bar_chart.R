@@ -23,7 +23,7 @@ dati_fine <- dati %>%
   mutate(rank = row_number()) %>%
   filter(rank <=21)
 
-#Correggo nomi regioni per renderli più leggibili
+#Correggo nomi regioni per renderli piÃ¹ leggibili
 
 dati_fine$denominazione_regione[dati_fine$denominazione_regione == "Emilia-Romagna"] <-"E. Romagna"
 dati_fine$denominazione_regione[dati_fine$denominazione_regione == "Friuli Venezia Giulia"] <-"F. V. Giulia"
