@@ -42,6 +42,7 @@ anim <- dati_fine %>%
   scale_y_continuous(labels = scales::comma) +
   scale_x_reverse() +
   guides(color = FALSE, fill = FALSE) +
+  geom_hline(yintercept = 800000,color = "grey", size=1)+
   
   theme(axis.line=element_blank(),
         axis.text.x=element_blank(),
@@ -63,16 +64,16 @@ anim <- dati_fine %>%
         plot.margin = margin(2,2, 2, 4, "cm")) +
   transition_states(data, transition_length = 2, state_length = 1) +
   view_follow(fixed_x = TRUE)  +
-  labs(title = 'Totale casi',  
+  labs(title = 'Totale casi COVID-19',  
        subtitle  =  "{closest_state}",
        caption  = "Grafico di Alessio Garau | Dati: https://github.com/pcm-dpc/COVID-19") 
 
 #GIF
 
-animate(anim, 8925, fps = 25,  width = 1200, height = 1000, 
+animate(anim, 1200, fps = 25,  width = 1200, height = 1000, 
         renderer = gifski_renderer("gganim.gif")) 
 
 #MP4
 
-animate(anim, duration = 20, fps = 20, renderer = av_renderer())
+animate(anim, duration = 1200, fps = 25, renderer = av_renderer())
 anim_save("output.mp4", anim)
