@@ -1,2 +1,33 @@
-Primo tentativo di realizzazione di un animated bar chart su Dati COVID-19 Italia forniti dalla protezione civile.
-DISCLAIMER: il codice che trovate nello script è stato costruito sulla base del seguente post: https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other
+Animated Bar Chart of COVID-19 Cases in Italy's Regions
+
+This code is an initial attempt to create an animated bar chart using COVID-19 data in Italy provided by the Civil Protection Agency. The code builds on a solution posted on StackOverflow: https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other
+Required Libraries
+
+The following libraries are required to run this code:
+
+    dplyr
+    readr
+    zoo
+    ggplot2
+    gganimate
+    gifski
+    tidyverse
+
+Data
+
+The COVID-19 data for Italy's regions is obtained from the following URL:
+"https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv"
+Code Description
+
+The code loads the required libraries and reads in the COVID-19 data for Italy's regions. It then organizes the data and assigns a ranking to each region based on the number of total cases. The code also corrects the region names to make them more readable.
+
+The code then creates an animated bar chart using ggplot2 and gganimate libraries. The bar chart shows the ranking of regions based on the number of total cases, with each region represented by a colored bar. The bar chart also displays the number of total cases for each region and the region names. The chart is animated, showing how the ranking of regions changes over time.
+
+The code generates two output files:
+
+    "gganim.gif": a GIF animation of the bar chart
+    "output.mp4": an MP4 video of the bar chart
+
+Disclaimer
+
+Please note that the code is an initial attempt to create an animated bar chart and may require modifications to meet specific needs. The data used is also subject to change and should be updated accordingly.
