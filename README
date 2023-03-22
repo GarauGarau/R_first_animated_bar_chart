@@ -1,4 +1,4 @@
-Animated Bar Chart of COVID-19 Cases in Italy's Regions
+# Animated Bar Chart of COVID-19 Cases in Italy's Regions
 
 This code is an initial attempt to create an animated bar chart using COVID-19 data in Italy provided by the Civil Protection Agency. The code builds on a solution posted on StackOverflow: https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other
 Required Libraries
@@ -13,7 +13,7 @@ The following libraries are required to run this code:
     gifski
     tidyverse
 
-Data
+## Data
 
 The COVID-19 data for Italy's regions is obtained from the following URL:
 "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv"
@@ -28,6 +28,6 @@ The code generates two output files:
     "gganim.gif": a GIF animation of the bar chart
     "output.mp4": an MP4 video of the bar chart
 
-Disclaimer
+## Disclaimer
 
 Please note that the code is an initial attempt to create an animated bar chart and may require modifications to meet specific needs. The data used is also subject to change and should be updated accordingly.
